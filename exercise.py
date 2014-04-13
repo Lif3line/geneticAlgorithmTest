@@ -1,3 +1,3 @@
 from genetics import *
 
-print populate(50)
+print fitness(individual())

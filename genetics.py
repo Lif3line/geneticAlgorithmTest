@@ -1,5 +1,6 @@
 'Functions to implement the genetic algorithm'
 import random
+import math
 
 'Create a member of the population'
 def individual():
@@ -13,7 +14,9 @@ def populate(count):
 
 'Calculate the fitness of an individual'
 def fitness(individual):
-    return null
+    x = individual[0]
+    y = individual[1]
+    return ((1-x)**2) * math.exp(-x**2 - (y+1)**2) - (x - x**3 - y**3)*math.exp(-x**2 - y**2) 
 
 'Take a population and evolve it one generation'
 def evolve(pop):
