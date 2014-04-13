@@ -9,7 +9,7 @@ def individual():
 
 'Generate a population - some number of individuals'
 def populate(count):
-    return null
+    return [individual() for i in xrange(count)]
 
 'Calculate the fitness of an individual'
 def fitness(individual):
